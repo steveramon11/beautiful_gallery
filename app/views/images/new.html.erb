@@ -1,0 +1,19 @@
+<h1>Upload Image</h1>
+
+<%= form_for @image, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
+  <%= f.label "picture Text" %>
+  <%= f.file_field :picture %>
+
+  <%= f.label "caption" %>
+  <%= f.text_field :caption %>
+
+  <%= f.label "description" %>
+  <%= f.text_field :description %>
+
+  <%= f.label "Alternative Text" %>
+  <%= f.text_field :alt_text %>
+
+  <%= f.submit 'Submit' %>
+<% end %>
+
+<%= link_to 'Back', images_path %>

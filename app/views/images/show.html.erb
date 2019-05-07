@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+
+<figure>
+  <%= image_tag(url_for(@image.picture), alt: @image.alt_text) %>
+  <figcaption><%= @image.caption %></figcaption>
+</figure>
+
+<p>
+  <strong>Description: </strong>
+  <%= @image.description %>
+</p>
+
+<%= link_to 'Back', images_path %>
