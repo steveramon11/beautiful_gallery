@@ -1,13 +1,22 @@
-<p id="notice"><%= notice %></p>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <body>
+    <p id="notice"><%= notice %></p>
 
-<figure>
-  <%= image_tag(url_for(@image.picture), alt: @image.alt_text) %>
-  <figcaption><%= @image.caption %></figcaption>
-</figure>
+    <figure>
+      <%= image_tag(url_for(@image.picture), alt: @image.alt_text) %>
+      <figcaption><%= @image.caption %></figcaption>
+    </figure>
 
-<p>
-  <strong>Description: </strong>
-  <%= @image.description %>
-</p>
+    <p>Description: <%= @image.description %></p>
 
-<%= link_to 'Back', images_path %>
+    <div class="button">
+      <%= link_to 'Back', images_path %>
+    </div>
+
+    <div class="button">
+      <%= link_to 'Delete', @image, method: :delete, data: { confirm: 'Are you sure you want to delete this image?' } %>
+    </div>
+
+  </body>
+</html>

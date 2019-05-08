@@ -1,18 +1,32 @@
-<h1>Upload Image</h1>
+<!DOCTYPE html>
+<html>
+  <body>
+    <div class="container">
+      <h1>Upload Image</h1>
 
-<%= form_for @image, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
-  <%= f.file_field :picture %>
+      <%= form_for @image, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
+        <%= f.file_field :picture %>
 
-  <%= f.label "caption" %>
-  <%= f.text_field :caption %>
+        <%= f.label "caption" %>
+        <%= f.text_field :caption %>
 
-  <%= f.label "description" %>
-  <%= f.text_field :description %>
+        <%= f.label "description" %>
+        <%= f.text_field :description %>
 
-  <%= f.label "Alternative Text" %>
-  <%= f.text_field :alt_text %>
+        <%= f.label "Alternative Text" %>
+        <%= f.text_field :alt_text %>
 
-  <%= f.submit 'Submit' %>
-<% end %>
+        <br>
 
-<%= link_to 'Back', images_path %>
+        <%= f.submit 'Submit' %>
+      <% end %>
+
+      <br>
+
+      <div class="button">
+        <%= link_to 'Back', images_path %>
+      </div>
+
+    </div>
+  </body>
+</html>

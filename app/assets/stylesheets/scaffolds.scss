@@ -33,6 +33,10 @@ a > img {
     opacity: 0.5;
     transition: 0.3s;
   }
+
+  border: 1px solid #ddd; /* Gray border */
+  border-radius: 4px;  /* Rounded border */
+  padding: 5px; /* Some padding */
 }
 
 th {
