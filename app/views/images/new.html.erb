@@ -1,7 +1,6 @@
 <h1>Upload Image</h1>
 
 <%= form_for @image, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
-  <%= f.label "picture Text" %>
   <%= f.file_field :picture %>
 
   <%= f.label "caption" %>
