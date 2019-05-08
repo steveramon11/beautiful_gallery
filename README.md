@@ -1,4 +1,4 @@
-# README
+# Gallery
 
 Simple gallery app to upload and delete images using AWS S3 for storage.
 
